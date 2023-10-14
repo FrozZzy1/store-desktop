@@ -1,5 +1,3 @@
-from typing import Optional
-
 from PyQt6.QtWidgets import QMainWindow, QPushButton
 
 from windows.authorization import AuthorizationWindow
@@ -18,17 +16,17 @@ class MainWindow(QMainWindow, TemplateWindow):
         self.setWindowTitle('Store')
         self.setStyleSheet("""
         QMainWindow {
-        background-image: url(images/mainwindow__background.png);
+        background-image: url(images/background.png);
         }
         """)
 
         self.authorization_button = QPushButton('Авторизация', self)
-        self.authorization_button.move(1000, 100)
+        self.authorization_button.move(self.window_width // 2 - 75, self.window_height // 2 - 100)
         self.authorization_button.resize(150, 45)
         self.authorization_button.clicked.connect(self.to_authorization)
 
         self.registration_button = QPushButton('Регистрация', self)
-        self.registration_button.move(1000, 160)
+        self.registration_button.move(self.window_width // 2 - 75, self.window_height // 2 - 40)
         self.registration_button.resize(150, 45)
         self.registration_button.clicked.connect(self.to_registration)
 
