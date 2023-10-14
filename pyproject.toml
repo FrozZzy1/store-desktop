@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "store-desktop"
+version = "0.1.0"
+description = ""
+authors = ["FrozZzy1 <frozzzy71@gmail.com>"]
+readme = "README.md"
+packages = [{include = "store_desktop"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyqt6 = "^6.5.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
